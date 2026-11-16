@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "derivative-pricing-lab"
+version = "0.1.0"
+description = "Option pricing by closed form, binomial tree and Monte Carlo, each checked against the others"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "matplotlib>=3.9"]
+
+[tool.setuptools]
+packages = ["pricing"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
